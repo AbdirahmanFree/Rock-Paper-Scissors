@@ -55,7 +55,7 @@ function playRound(humanChoice, computerChoice) {
             }
             else {
                 humanScore+=1;
-                console.log(`You Win! scissors beats paper`)
+                console.log(`You Win! scissors beats paper`);
             }
         }
         
@@ -63,5 +63,17 @@ function playRound(humanChoice, computerChoice) {
 
     
 }
+
+function playGame() {
+    for( i = 0; i < 5; i++) {
+        console.log(`Round ${i+1}`);
+        playRound(getHumanChoice(),getComputerChoice());
+        console.log(`User score: ${humanScore}`);
+        console.log(`Computer score: ${computerScore}`);
+    }
+
+}
+
+playGame();
 
 
